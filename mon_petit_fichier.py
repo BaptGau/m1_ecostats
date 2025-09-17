@@ -1,3 +1,6 @@
+from fonctions.exemple_fonction import manage_micro_wave_commands
+from fonctions.exercice import calculatrice
+
 var = 22
 print(var)
 print(type(var))
@@ -36,3 +39,19 @@ bool(None)
 
 # None
 v = None
+
+calculatrice()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

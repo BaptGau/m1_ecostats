@@ -22,6 +22,16 @@ else:
 
 couleurs: Literal["rouge", "vert", "bleu", "jaune", "noir"] = 'chaudron'
 
+
+if couleurs == "rouge":
+    if variable == 0:
+        ...
+elif couleurs == "vert":
+    ...
+elif couleurs == "bleu":
+    print(...)
+
+
 match couleurs:
     case "rouge":
         print("0000FF")
