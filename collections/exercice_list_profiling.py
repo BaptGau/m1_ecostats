@@ -54,9 +54,24 @@ if __name__ == "__main__":
 
     # exercice simple:
     # créer un dictionnaire pour stocker les résultats plutôt qu'une liste
-    results = [append_time, extend_time, prefill_time, comprehension_time]
+    results = {
+        "Append method": append_time,
+        "Extend method": extend_time,
+        "Prefill method": prefill_time,
+        "Comprehension method": comprehension_time
+   }
 
-    len(results)
+    print(len(results))
+    print(results)
+
+
+
+
+
+
+
+
+
 
 
 
