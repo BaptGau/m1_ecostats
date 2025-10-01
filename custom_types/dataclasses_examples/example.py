@@ -23,10 +23,12 @@ class ComputationResult:
     operation: Operation
     input_variables: Tuple[int | float, int | float]
 
+# custom_types/dataclasses_examples/example.py
+
 def calculatrice(x: int, y: int, operation: Operation) -> ComputationResult:
     match operation:
         case Operation.ADD:
-            c1 = ComputationResult(
+            return ComputationResult(
                 result=x + y,
                 operation=operation,
                 input_variables=(x, y),
