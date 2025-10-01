@@ -15,7 +15,6 @@ class ParametresOrdinateur:
     os: Literal["MacOs", "Linux", "Windows"]
     python_version: str
 
-
 @dataclass
 class Etudiant:
     name: str
