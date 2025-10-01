@@ -9,11 +9,13 @@ from dataclasses import dataclass
 # - un nom (chaine de caractère)
 # - un prix (réel)
 
+
 # exercice: Créer un panier de trois (ou plus) produits et faire la somme
 @dataclass
 class Produit:
     nom: str
     prix: float
+
 
 @dataclass
 class Panier:
@@ -21,6 +23,7 @@ class Panier:
 
     def somme_des_produits(self) -> int:
         return sum(produit.prix for produit in self.produits)
+
 
 # définition des produits
 ordinateur = Produit(nom="ordinateur", prix=350.45)

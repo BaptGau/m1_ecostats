@@ -10,7 +10,9 @@ tableau = np.arange(15)
 print(tableau)
 print(tableau.shape)
 
-tableau = tableau.reshape(3, 5) # il faut que le nombre de ligne x le nombre de colonnes = la taille du vecteur
+tableau = tableau.reshape(
+    3, 5
+)  # il faut que le nombre de ligne x le nombre de colonnes = la taille du vecteur
 print(tableau)
 print(tableau.shape)
 print("# Somme")
@@ -27,9 +29,9 @@ filtered_tab = tableau[mask]
 # Indexing
 tableau = np.arange(15)
 tableau = tableau.reshape(3, 5)
-print(tableau[0, :]) # accéder à la première ligne
-print(tableau[:, 0]) # accéder à la première colonne
-print(tableau[0, 0]) # accéder au premier élément [0, 0]
+print(tableau[0, :])  # accéder à la première ligne
+print(tableau[:, 0])  # accéder à la première colonne
+print(tableau[0, 0])  # accéder au premier élément [0, 0]
 # print(tableau[i, j]) # accéder à l'élément i, j
 
 # Random
@@ -53,26 +55,19 @@ uniform_vector = np.random.uniform(low=-5, high=5, size=500)
 # broadcasting
 tableau = np.arange(15)
 tableau = tableau.reshape(3, 5)
-tableau = tableau * 10 # -> broadcasting
+tableau = tableau * 10  # -> broadcasting
 print(tableau)
 
 # slicing
 tableau = np.arange(15)
 print("Slicing")
 print(f"Avant slicing: {tableau}")
-print(f"Sliced: {tableau[5:11]}") # on récupère les éléments aux indices 5 à 10
+print(f"Sliced: {tableau[5:11]}")  # on récupère les éléments aux indices 5 à 10
 # tableau[i, j] -> créer un sous tableau des éléments compris entre i et j-1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+# modification
+tableau[1] = 1000
+print(tableau)
+tableau[1:9] = np.arange(8) * 1000
+print(tableau)

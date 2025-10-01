@@ -9,6 +9,7 @@ class Point:
     def is_origin(self) -> bool:
         return self.x == 0 and self.y == 0
 
+
 p1 = Point(x=3, y=3)
 p2 = Point(x=3, y=3)
 p3 = Point(x=10, y=0)
