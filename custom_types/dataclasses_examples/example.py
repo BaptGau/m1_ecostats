@@ -1,9 +1,9 @@
 # refaire la calculette pour la 17 e fois
 # avec une opération qui est toujours un enum
 # La sortie doit contenir trois éléments:
-# - le résultat du calcul
+# - Le résultat du calcul
 # - Opération réalisée
-# - (bonus): Le vecteur des entrées (x, y)
+# - Le vecteur des entrées (x, y)
 
 
 from dataclasses import dataclass
@@ -26,12 +26,8 @@ class ComputationResult:
 def calculatrice(x: int, y: int, operation: Operation) -> ComputationResult:
     match operation:
         case Operation.ADD:
-
-            add_result = x + y
-
-
-            return ComputationResult(
-                result=add_result,
+            c1 = ComputationResult(
+                result=x + y,
                 operation=operation,
                 input_variables=(x, y),
             )
