@@ -9,12 +9,15 @@ class EnabledColors(Enum):
     YELLOW = "yellow"
     BLACK = "black"
 
+
 color = EnabledColors.GREEN
+
 
 def func(color: Literal["red", "green", "blue", "yellow", "black"]):
     match color:
         case "red":
-            ... # fé des trucs avec la couleur
+            ...  # fé des trucs avec la couleur
+
 
 def func_enum(color: EnabledColors) -> None:
     match color:
@@ -28,6 +31,7 @@ def func_enum(color: EnabledColors) -> None:
             print("C'est jaune")
         case EnabledColors.BLACK:
             print("C'est noir")
+
 
 v = EnabledColors("red")
 # v sera EnabledColors.RED

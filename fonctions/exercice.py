@@ -6,7 +6,11 @@
 from typing import Literal
 
 
-def calculatrice(x: int | float, y : int | float, instruction: Literal["add", "subtract", "multiply", "divide", "approximate_divide"]) -> int | float:
+def calculatrice(
+    x: int | float,
+    y: int | float,
+    instruction: Literal["add", "subtract", "multiply", "divide", "approximate_divide"],
+) -> int | float:
     match instruction:
         case "add":
             return x + y
@@ -19,17 +23,11 @@ def calculatrice(x: int | float, y : int | float, instruction: Literal["add", "s
                 raise ZeroDivisionError(f"Got x: {x}, y: {y}")
             return x / y
         case "approximate_divide":
-            return x / (y+10e-6)
+            return x / (y + 10e-6)
         case _:
-            raise ValueError(f"Invalid instruction: {instruction} - Expected 'add', 'subtract', 'multiply', 'divide', or 'approximate_divide'")
-
-
+            raise ValueError(
+                f"Invalid instruction: {instruction} - Expected 'add', 'subtract', 'multiply', 'divide', or 'approximate_divide'"
+            )
 
 
 result = calculatrice(10, 0, "divide")
-
-
-
-
-
-

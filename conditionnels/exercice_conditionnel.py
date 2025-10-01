@@ -22,10 +22,11 @@ temps_cuisson_secondes = int(input("Saisissez le temps de cuisson en secondes: "
 temps_cuisson_minutes = temps_cuisson_secondes / 60
 
 if temps_cuisson_minutes > 5:
-    raise ValueError("Le micro-ondes ne supportes pas des temps de cuisson supérieurs à 5 minutes.")
+    raise ValueError(
+        "Le micro-ondes ne supportes pas des temps de cuisson supérieurs à 5 minutes."
+    )
 else:
     print("Cuisson en cours")
-
 
 
 # Exercice 2

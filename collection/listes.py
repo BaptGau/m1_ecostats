@@ -12,7 +12,7 @@ non_empty_list.extend(["au revoir"])
 print(non_empty_list)
 
 # prefill
-prefilled_list = [None]*10
+prefilled_list = [None] * 10
 prefilled_list[0] = 1
 prefilled_list[1] = 2
 prefilled_list[2] = 3
@@ -35,6 +35,7 @@ def map_grade_to_comment(grade: int) -> str:
     else:
         return "Niquel"
 
+
 notes = [5, 10, 12, 15, 14, 13, 20, 2, 15]
 
 # list comprehension
@@ -47,24 +48,28 @@ for grade in notes:
     comments.append(map_grade_to_comment(grade=grade))
 print(comments)
 
+
 # example de fonction prenant une liste en entrée
 def square(integers: list[int]) -> list[int]:
-    return [integer ** 2 for integer in integers]
+    return [integer**2 for integer in integers]
 
 
 print(square([2, 4, 6, 8, 10]))
+
 
 # exercice recrutement
 def append_list_element(sequence: list[str], element: str):
     sequence.append(element)
 
+
 def append_string_element(sequence: str, element: str):
     sequence += element
 
-test_list = ['foo', 'bar']
-append_list_element(sequence=test_list, element='baz')
+
+test_list = ["foo", "bar"]
+append_list_element(sequence=test_list, element="baz")
 print(test_list)
 
 test_str = "foo"
-append_string_element(sequence=test_str, element='baz')
+append_string_element(sequence=test_str, element="baz")
 print(test_str)

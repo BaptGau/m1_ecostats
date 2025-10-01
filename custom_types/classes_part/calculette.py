@@ -9,24 +9,15 @@ class Calculette:
 
         return add_result
 
-    def subtract(self, x: int | float, y: int | float) -> int | float:
-        ...
+    def subtract(self, x: int | float, y: int | float) -> int | float: ...
 
-    def divide(self, x: int | float, y: int | float) -> int | float:
-        ...
+    def divide(self, x: int | float, y: int | float) -> int | float: ...
 
-    def multiply(self, x: int | float, y: int | float) -> int | float:
-        ...
+    def multiply(self, x: int | float, y: int | float) -> int | float: ...
+
 
 # utilisation
 calculette = Calculette()
 add_result = calculette.add(x=1, y=2)
 print(add_result)
 print(calculette.performed_operations)
-
-
-
-
-
-
-

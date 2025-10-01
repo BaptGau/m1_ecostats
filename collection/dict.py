@@ -17,7 +17,3 @@ print(mon_dict.get(14, "Not in the dict"))
 
 # comprehension
 print({f"Nombre {i}": i for i in range(10)})
-
-
-
-

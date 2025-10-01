@@ -33,20 +33,23 @@ def test_operation_raise_error_if_type_is_not_numeric():
         assert calculatrice(x=x, y=y, instruction="add")
 
 
-
 def test_substract_between_two_integers():
     x = 10
     y = 5
 
     assert calculatrice(x=x, y=y, instruction="subtract") == x - y
 
+
 ...
+
 
 def test_divide_by_zero_raises_error():
     with pytest.raises(ZeroDivisionError):
         calculatrice(x=100, y=0, instruction="divide")
 
+
 ...
+
 
 def test_calculatrice_handle_multiplication_with_two_integers():
     x = 10

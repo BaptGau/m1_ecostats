@@ -20,7 +20,7 @@ else:
     print("La variable est égale à zéro")
 
 
-couleurs: Literal["rouge", "vert", "bleu", "jaune", "noir"] = 'chaudron'
+couleurs: Literal["rouge", "vert", "bleu", "jaune", "noir"] = "chaudron"
 
 
 if couleurs == "rouge":

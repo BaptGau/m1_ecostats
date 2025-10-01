@@ -8,6 +8,7 @@ class MicroWaveManager:
     def close(self):
         self.status = "close"
 
+
 microwave_manager = MicroWaveManager()
 microwave_manager.open()
 microwave_manager.close()

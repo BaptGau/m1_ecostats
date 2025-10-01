@@ -2,6 +2,7 @@
 # Recoder la fonction calculatrice avec une instruction qui est un enum
 from enum import Enum, auto
 
+
 class Operation(Enum):
     ADD = auto()
     SUBTRACT = auto()

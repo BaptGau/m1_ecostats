@@ -9,10 +9,12 @@ class AppreciationPython(Enum):
     SUPER = auto()
     EN_MAITRISE = auto()
 
+
 @dataclass
 class ParametresOrdinateur:
     os: Literal["MacOs", "Linux", "Windows"]
     python_version: str
+
 
 @dataclass
 class Etudiant:
@@ -29,9 +31,7 @@ moi = Etudiant(
     parametres=ParametresOrdinateur(
         os="MacOs",
         python_version="3.12.0",
-    )
+    ),
 )
 
 print(moi)
-
-
