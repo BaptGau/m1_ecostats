@@ -36,7 +36,7 @@ panier_vide = Panier(produits=[])
 print(panier_vide.somme_des_produits())
 
 panier = Panier(
-    produits=[ordinateur, farine, oeufs, sucre],
+    produits=[ordinateur, farine, oeufs, sucre, Produit(nom="bonjour", prix=350.45)],
 )
 
 # accès à la variable
