@@ -1,4 +1,4 @@
-from use_case_t_test.student_result_data_object import StudentTestResult
+from use_case_t_test.data.student_result import StudentTestResult
 
 
 def test_student_result_passes_when_pval_inf_alpha():
@@ -11,7 +11,7 @@ def test_student_result_passes_when_pval_inf_alpha():
     )
 
 
-    assert result.does_test_pass(), "The test should pass when p_value is lte alpha"
+    assert result.are_means_equals(), "The test should pass when p_value is lte alpha"
 
 
 def test_student_result_passes_when_pval_sup_alpha():
@@ -24,4 +24,4 @@ def test_student_result_passes_when_pval_sup_alpha():
     )
 
 
-    assert not result.does_test_pass(), "The test should pass when p_value is lte alpha"
+    assert not result.are_means_equals(), "The test should pass when p_value is lte alpha"

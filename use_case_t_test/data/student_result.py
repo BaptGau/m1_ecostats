@@ -12,5 +12,5 @@ class StudentTestResult:
     alpha: float = 0.05
     p_value: float = 0.05
 
-    def does_test_pass(self) -> bool:
+    def are_means_equals(self) -> bool:
         return self.p_value <= self.alpha
