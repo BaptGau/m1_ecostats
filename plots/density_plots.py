@@ -5,7 +5,7 @@ import seaborn as sns
 variable = np.random.normal(0, 1, 100)
 variable_2 = np.random.normal(5, 1, 100)
 
-sns.set_style(style='darkgrid')
+sns.set_style(style="darkgrid")
 
 plt.figure(figsize=(12, 8))
 plt.title("Density plot")
