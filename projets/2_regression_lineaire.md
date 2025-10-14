@@ -20,7 +20,7 @@ Votre code sera structuré autour de **trois objets principaux** + une **fonctio
 - `features_name` : liste contenant les noms des colonnes *(longueur p)*
 
 ### Fonctionnalités
-- Ajouter un **intercept** à la matrice `X` *(si non présent)*.  
+- Ajouter un **intercept** à la matrice `X` *(si non présent)*. Pour plus de détails: voir [ici](https://freedium.cfd/https://medium.com/datascienceray/why-add-an-intercept-column-into-datasets-a2385cdb33bc).
 - Convertir le dataset en **DataFrame Pandas**, en utilisant `features_name` pour nommer les colonnes.
 
 ---

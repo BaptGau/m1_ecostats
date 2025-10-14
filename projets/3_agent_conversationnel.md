@@ -51,9 +51,53 @@ Le projet s’articule autour de **trois grands volets** :
 ---
 
 ## 3. 🌐 Gestion du chat
+# todo : + d'explications sur l'integration Nebius
 
 Gérer comment interagir avec l'API Open AI de Nebius pour différents modèles.
 - Faire une fonction "wrappant" l'usage de Nebius ou de n'importe lequel de vos providers.
+
+Voici quelques étapes à suivre pour l'intégration en Nebius:
+- Créer une clé API en cliquant sur "Get API key" [en haut à droite ici](https://studio.nebius.com/?modality=text2text&visibility=public&deployment=all)
+- Créer un fichier ".env" à la racine de votre projet et copier coller votre clé dedans: `NEBIUS_API_KEY=<votre_cle_ici>`
+- Installer dotenv: `uv add dotenv` ou `pip install dotenv`
+- Pour charger votre clé API, faire:
+```python
+import os
+from dotenv import load_dotenv
+
+load_dotenv() # uv add dotenv
+
+api_key = os.environ.get("NEBIUS_API_KEY") # récupère la variable d'env
+```
+- Regarder dans le [playground de Nebius](https://studio.nebius.com/playground?models=openai/gpt-oss-120b) le code python en cliquant sur le bouton `</> View code` en haut à droite.
+- Voir comment interfacer les messages entre la class `ChatTurn` et le format attendu par open AI (exemple ci après)
+```
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    base_url="https://api.studio.nebius.com/v1/",
+    api_key=os.environ.get("NEBIUS_API_KEY")
+)
+
+response = client.chat.completions.create(
+    model="openai/gpt-oss-120b",
+    messages=[
+            {
+            "role": "user",
+            "content": [
+                {
+                    "type": "text",
+                    "text": """Bonjour, comment vas tu ?"""
+                }
+            ]
+        }
+
+    ]
+)
+# doit être parsé en quelque chose de la forme 
+[ChatTurn(speaker=AI, content="Bonjour, comment vas tu ?")]
+```
 
 ## 4. 📊 Benchmark des Modèles
 
@@ -77,10 +121,7 @@ Comparer différents LLM sur la base de leur **verbosité**.
 ---
 
 ## 🧪 Remarques Générales
-
-- Pour tester différents modèles, vous pouvez utiliser 
-
-- 👉 [Nebius AI Studio](http://studio.nebius.com/) *(pensez à créer une clé API)*.
+- Pour tester différents modèles, vous pouvez utiliser [Nebius AI Studio](http://studio.nebius.com/) *(pensez à créer une clé API)*.
 
 ### Critères d’évaluation
 - ✅ **Maintenabilité** : code propre, lisible et testé  
